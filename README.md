@@ -16,3 +16,9 @@ This repository documents the foundational skills required for a Data Center Tec
 1. Clone the repo.
 2. Run `chmod +x setup_env.sh`.
 3. Execute with `sudo ./setup_env.sh`.
+
+## 🤖 Automation Tools
+- `onboard.sh`: An intelligent onboarding script that:
+  - Checks for existing users to prevent duplicates.
+  - Automatically assigns users to the `va_techs` group.
+  - Logs all administrative actions to `onboarding_history.log`.
