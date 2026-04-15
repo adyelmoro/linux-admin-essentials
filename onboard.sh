@@ -4,6 +4,14 @@
 echo "Enter the name of the new Technician:"
 read NEW_USER
 
+echo "Confirm: Create user '$NEW_USER'? (y/n)"
+read CONFIRM
+
+if [[ "$CONFIRM" != "y" ]]; then
+    echo "Aborting. No changes made."
+    exit 1
+fi
+
 # 1.1. The Check (The 'If' statement goes here)
 if id "$NEW_USER" &>/dev/null; then
     # This part runs if the user IS found
