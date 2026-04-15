@@ -22,3 +22,7 @@ This repository documents the foundational skills required for a Data Center Tec
   - Checks for existing users to prevent duplicates.
   - Automatically assigns users to the `va_techs` group.
   - Logs all administrative actions to `onboarding_history.log`.
+  - `mass_onboard.sh`: A bulk automation tool that:
+  - Reads a list of usernames from an external text file (`technicians.txt`).
+  - Iterates through the list using a `for` loop to create accounts.
+  - Logs mass-onboarding events with a specialized `[MASS ONBOARD]` tag.
