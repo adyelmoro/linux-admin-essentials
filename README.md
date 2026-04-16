@@ -58,6 +58,7 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Archiving:** Utilized `tar` (Tape Archive) with Gzip compression to bundle system files and web content.
 - **Dynamic Versioning:** Engineered a timestamping logic (`date +%Y-%m-%d`) to prevent file overwrites and allow for point-in-time recovery.
 - **Automated Maintenance:** (Optional) Prepared for Cron integration to perform nightly headless backups.
+- **Disaster Recovery Testing:** Verified 100% data integrity through successful restoration drills using tar -C / logic.
 
 ### 🛡️ Repository Integrity
 - **Security Guardrails:** Implemented a `.gitignore` policy to prevent sensitive data (SSH keys, private logs) from ever reaching the public cloud.
