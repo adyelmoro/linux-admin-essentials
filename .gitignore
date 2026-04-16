@@ -1,0 +1,10 @@
+# Ignore SSH keys
+.ssh/
+id_ed25519*
+authorized_keys
+
+# Ignore local logs (optional, depends if you want them public)
+*.log
+
+# Ignore OS-specific files
+.DS_Store

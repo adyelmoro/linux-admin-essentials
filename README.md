@@ -1,4 +1,4 @@
-# Linux System Administration Essentials (Day 1)
+# Linux System Administration Essentials
 
 This repository documents the foundational skills required for a Data Center Technician role, specifically modeled after workflows found in enterprise facilities like Google Skien.
 
@@ -50,3 +50,14 @@ Implemented industry-standard security protocols to protect the infrastructure f
 - **SSH Key Authentication:** Transitioned from insecure password-based logins to Ed25519 Cryptographic Key Pairs.
 - **Service Hardening:** Installed and configured `openssh-server` with proper directory permissions (`700` for `.ssh` and `600` for `authorized_keys`).
 - **Host Verification:** Established a trusted `known_hosts` baseline for secure remote management.
+
+## 📦 Project: Data Persistence & Recovery
+Established a robust backup protocol to ensure business continuity and protect system integrity.
+
+### 💾 Storage Management
+- **Archiving:** Utilized `tar` (Tape Archive) with Gzip compression to bundle system files and web content.
+- **Dynamic Versioning:** Engineered a timestamping logic (`date +%Y-%m-%d`) to prevent file overwrites and allow for point-in-time recovery.
+- **Automated Maintenance:** (Optional) Prepared for Cron integration to perform nightly headless backups.
+
+### 🛡️ Repository Integrity
+- **Security Guardrails:** Implemented a `.gitignore` policy to prevent sensitive data (SSH keys, private logs) from ever reaching the public cloud.
