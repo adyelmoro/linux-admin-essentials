@@ -70,3 +70,8 @@ Established a robust backup protocol to ensure business continuity and protect s
   - Tracks failed SSH login attempts to identify potential brute-force attacks.
   - Monitors `sudo` usage for administrative accountability.
   - Captures kernel/hardware errors (e.g., Bluetooth, RAS) for proactive maintenance.
+
+### Real-Time Observability Dashboard
+- **Live Telemetry**: Integrated `uptime`, `free -m`, and `df` to monitor CPU Load, Memory usage, and Disk capacity in real-time.
+- **Unattended Automation**: Configured a `crontab` job with specific `sudoers` (NOPASSWD) permissions to refresh system stats every minute.
+- **Dynamic UI**: Improved dashboard with CSS Grid for responsive alignment and added a `meta-refresh` tag for an automated, "hands-off" monitoring experience.
