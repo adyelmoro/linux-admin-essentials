@@ -41,3 +41,12 @@ Successfully deployed a professional-grade monitoring interface to visualize adm
 - **System Telemetry:** Real-time display of Server IP and System Uptime.
 - **Automated Deployment:** A custom script (`update_dashboard.sh`) that rebuilds the web interface whenever the background data changes.
 - **Mobile-Responsive Design:** Used a CSS grid layout for cross-device compatibility.
+
+## 🛡️ Project: Server Hardening & Secure Access
+Implemented industry-standard security protocols to protect the infrastructure from unauthorized access.
+
+### 🔐 Security Implementations
+- **Firewall Management (UFW):** Configured a "Default Deny" policy, explicitly allowing only Port 80 (Web) and Port 22 (SSH).
+- **SSH Key Authentication:** Transitioned from insecure password-based logins to Ed25519 Cryptographic Key Pairs.
+- **Service Hardening:** Installed and configured `openssh-server` with proper directory permissions (`700` for `.ssh` and `600` for `authorized_keys`).
+- **Host Verification:** Established a trusted `known_hosts` baseline for secure remote management.
