@@ -26,3 +26,18 @@ This repository documents the foundational skills required for a Data Center Tec
   - Reads a list of usernames from an external text file (`technicians.txt`).
   - Iterates through the list using a `for` loop to create accounts.
   - Logs mass-onboarding events with a specialized `[MASS ONBOARD]` tag.
+
+## 🌐 Project: Live System Monitoring Dashboard
+Successfully deployed a professional-grade monitoring interface to visualize administrative actions in real-time.
+
+### 🛠️ Technology Stack
+- **Web Server:** Apache2 (HTTP)
+- **Front-end:** HTML5 & Modern CSS (Dark Mode / NOC-style UI)
+- **Back-end:** Bash Scripting with `cat <<EOF` (Here Documents)
+- **Automation:** Cron (Scheduled tasks for 60-second refreshes)
+
+### 🚀 Key Features
+- **Dynamic Data Extraction:** Automatically parses `onboarding_history.log` to track total user counts and the latest admin events.
+- **System Telemetry:** Real-time display of Server IP and System Uptime.
+- **Automated Deployment:** A custom script (`update_dashboard.sh`) that rebuilds the web interface whenever the background data changes.
+- **Mobile-Responsive Design:** Used a CSS grid layout for cross-device compatibility.
