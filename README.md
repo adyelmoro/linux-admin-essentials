@@ -62,3 +62,11 @@ Established a robust backup protocol to ensure business continuity and protect s
 
 ### 🛡️ Repository Integrity
 - **Security Guardrails:** Implemented a `.gitignore` policy to prevent sensitive data (SSH keys, private logs) from ever reaching the public cloud.
+
+### Log Management & System Auditing
+- **Log Rotation**: Configured `logrotate` for `/etc/logrotate.d/` to manage log file growth, ensuring storage stability via daily rotations and compression.
+- **Security Intelligence**: Developed `check_system.sh`, a diagnostic tool that parses `/var/log/auth.log` and `dmesg`.
+- **Automated Reporting**: 
+  - Tracks failed SSH login attempts to identify potential brute-force attacks.
+  - Monitors `sudo` usage for administrative accountability.
+  - Captures kernel/hardware errors (e.g., Bluetooth, RAS) for proactive maintenance.
