@@ -105,3 +105,9 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Dockerfile Engineering**: Authored a custom Dockerfile to package the Systems Admin Dashboard into a portable image.
 - **Image Versioning**: Used `docker build` with tagging to create `my-dashboard:v1`.
 - **Environment Isolation**: Observed the effects of containerization on system telemetry, learning the difference between host-level and container-level resource reporting.
+
+### Dashboard Containerization (The Portable Lab)
+- **Infrastructure as Code**: Authored a `Dockerfile` to automate the deployment of the Systems Admin Dashboard.
+- **Environment Parity**: Configured a containerized environment (Port 8081) to mirror the host configuration, ensuring cross-platform compatibility.
+- **Service Optimization**: Leveraged a PHP-Apache base image and implemented internal file permission management (`chown`) for secure web serving.
+- **Port Management**: Successfully mapped host port 8081 to container port 80, allowing concurrent web service hosting on a single machine.
