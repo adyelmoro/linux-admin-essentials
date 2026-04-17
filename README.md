@@ -100,3 +100,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Multi-Service Hosting**: Successfully deployed an Nginx web server using Docker while maintaining the primary Apache host.
 - **Port Redirection**: Implemented port mapping (`-p 8080:80`) to allow concurrent access to multiple web services on a single IP address.
 - **Container Management**: Mastered the lifecycle of containers, including `run`, `stop`, and `rm` commands.
+
+### Custom Image Creation (Containerization)
+- **Dockerfile Engineering**: Authored a custom Dockerfile to package the Systems Admin Dashboard into a portable image.
+- **Image Versioning**: Used `docker build` with tagging to create `my-dashboard:v1`.
+- **Environment Isolation**: Observed the effects of containerization on system telemetry, learning the difference between host-level and container-level resource reporting.
