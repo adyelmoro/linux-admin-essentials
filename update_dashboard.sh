@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+NET_STATUS=$(/home/tekavogtil/va-tech-training/linux-admin-essentials/net_check.sh | tail -n 3 | tr '\n' ' | ')
 
 # Path Definitions
 LOG_FILE="$SCRIPT_DIR/onboarding_history.log"
@@ -89,7 +90,10 @@ sudo bash -c "cat <<EOF > $WEB_FILE
         <div style='font-size: 0.75rem; color: #64748b; margin-top: 15px; text-align: center;'>
             Live Telemetry Active • Last Sync: $(date)
         </div>
-    </div>
+	<div class='stat-box'>
+    <div class='label'>Network Heartbeat</div>
+    <div class='value' style='font-size: 0.7rem; color: #10b981;'>$NET_STATUS</div>
+	</div>
 </body>
 </html>
 EOF"

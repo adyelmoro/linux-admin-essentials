@@ -80,3 +80,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **IP Discovery**: Used `ip addr` to identify internal network interfaces.
 - **Port Auditing**: Used `ss -tuln` to verify that the web server is listening on Port 80.
 - **Connectivity Testing**: Used `ping` with count flags to verify external internet access.
+
+### Connectivity Sentinel & Modular Integration
+- **Custom Monitoring**: Developed `net_check.sh` to perform multi-stage connectivity tests (Local Gateway, Public IP, and DNS Resolution).
+- **Script Integration**: Successfully linked the network monitor into the main dashboard using absolute pathing and command substitution.
+- **Data Formatting**: Used `tail` and `tr` to parse multi-line script output into a clean, single-line UI display.
