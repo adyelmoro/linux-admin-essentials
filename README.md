@@ -85,3 +85,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Custom Monitoring**: Developed `net_check.sh` to perform multi-stage connectivity tests (Local Gateway, Public IP, and DNS Resolution).
 - **Script Integration**: Successfully linked the network monitor into the main dashboard using absolute pathing and command substitution.
 - **Data Formatting**: Used `tail` and `tr` to parse multi-line script output into a clean, single-line UI display.
+
+### Self-Healing Infrastructure (The Janitor & The Guard)
+- **Automated Maintenance**: Developed `maintainer.sh` to perform routine system cleanup by identifying and purging temporary files older than 7 days.
+- **Service Watchdog**: Implemented a "Service Guard" logic that monitors the status of the Apache web server and triggers an automatic restart if the service is found to be inactive.
+- **Persistent Logging**: Configured Cron to execute the maintenance suite hourly, with output redirection to `maintenance.log` for auditing and troubleshooting.
