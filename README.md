@@ -75,3 +75,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Live Telemetry**: Integrated `uptime`, `free -m`, and `df` to monitor CPU Load, Memory usage, and Disk capacity in real-time.
 - **Unattended Automation**: Configured a `crontab` job with specific `sudoers` (NOPASSWD) permissions to refresh system stats every minute.
 - **Dynamic UI**: Improved dashboard with CSS Grid for responsive alignment and added a `meta-refresh` tag for an automated, "hands-off" monitoring experience.
+
+### Network Foundations
+- **IP Discovery**: Used `ip addr` to identify internal network interfaces.
+- **Port Auditing**: Used `ss -tuln` to verify that the web server is listening on Port 80.
+- **Connectivity Testing**: Used `ping` with count flags to verify external internet access.
