@@ -90,3 +90,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Automated Maintenance**: Developed `maintainer.sh` to perform routine system cleanup by identifying and purging temporary files older than 7 days.
 - **Service Watchdog**: Implemented a "Service Guard" logic that monitors the status of the Apache web server and triggers an automatic restart if the service is found to be inactive.
 - **Persistent Logging**: Configured Cron to execute the maintenance suite hourly, with output redirection to `maintenance.log` for auditing and troubleshooting.
+
+### Customization & Virtualization
+- **Terminal Personalization**: Created a custom MOTD (Message of the Day) script in `/etc/update-motd.d/` for a professional login experience.
+- **Containerization**: Installed and configured the Docker engine. 
+- **Docker Workflow**: Successfully pulled and executed a "Hello World" container, marking the transition from local services to containerized infrastructure.
