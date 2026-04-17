@@ -95,3 +95,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Terminal Personalization**: Created a custom MOTD (Message of the Day) script in `/etc/update-motd.d/` for a professional login experience.
 - **Containerization**: Installed and configured the Docker engine. 
 - **Docker Workflow**: Successfully pulled and executed a "Hello World" container, marking the transition from local services to containerized infrastructure.
+
+### Port Mapping & Containerized Web Services
+- **Multi-Service Hosting**: Successfully deployed an Nginx web server using Docker while maintaining the primary Apache host.
+- **Port Redirection**: Implemented port mapping (`-p 8080:80`) to allow concurrent access to multiple web services on a single IP address.
+- **Container Management**: Mastered the lifecycle of containers, including `run`, `stop`, and `rm` commands.

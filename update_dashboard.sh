@@ -91,8 +91,8 @@ sudo bash -c "cat <<EOF > $WEB_FILE
             Live Telemetry Active • Last Sync: $(date)
         </div>
 	<div class='stat-box'>
-    <div class='label'>Network Heartbeat</div>
-    <div class='value' style='font-size: 0.7rem; color: #10b981;'>$NET_STATUS</div>
+	    <div class='label'>Network Heartbeat</div>
+    	    <div class='value' style='font-size: 0.7rem; color: #10b981;'>$NET_STATUS</div>
 	</div>
 </body>
 </html>
