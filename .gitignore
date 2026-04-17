@@ -8,3 +8,15 @@ authorized_keys
 
 # Ignore OS-specific files
 .DS_Store
+
+# Ignore generated web files
+index.html
+
+# Ignore log files
+*.log
+
+# Ignore history files
+onboarding_history.log
+
+# Ignore the Docker build artifacts (if any)
+.dockerignore
