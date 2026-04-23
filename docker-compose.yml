@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # Service 1: My Custom Dashboard
+  my-dashboard:
+    build: .
+    ports:
+      - "8081:80"
+    restart: always
+
+  # Service 2: Generic Nginx server for testing
+  web-test:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
