@@ -125,3 +125,6 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Automated Rotation**: Implemented `logrotate` to prevent storage exhaustion, ensuring a rolling 7-day history of all administrative actions.
 - **Security Delegation**: Utilized the `su` (Switch User) directive to safely manage logs within a group-writable directory (`va_techs`), maintaining high security standards.
 - **Persistence**: Configured the `create` directive to ensure new log files inherit the correct ownership and `0660` permissions for uninterrupted dashboard monitoring.
+
+### 🧹 Repository Maintenance
+- **Advanced Filtering**: Configured .gitignore to exclude transient artifacts, rotated logs (*.log.*), and compressed archives (*.gz), keeping the version control history focused strictly on source code and configuration.
