@@ -14,6 +14,12 @@ index.html
 
 # Ignore log files
 *.log
+**.log.*
+*.gz
+
+# Ignore system-specific or hidden files
+.DS_Store
+Thumbs.db
 
 # Ignore history files
 onboarding_history.log
