@@ -120,3 +120,8 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Orchestration:** Docker Compose (V2)
 - **Clean Architecture:** Implemented a `.gitignore` policy to prevent tracking generated artifacts (`index.html`), focusing solely on tracking the "Recipe" (Dockerfile/YAML).
 - **Credential Security:** Configured Git credential helpers to maintain a secure, high-velocity push workflow for enterprise-level productivity.
+
+### The Sentinel (Log Management & Security)
+- **Automated Rotation**: Implemented `logrotate` to prevent storage exhaustion, ensuring a rolling 7-day history of all administrative actions.
+- **Security Delegation**: Utilized the `su` (Switch User) directive to safely manage logs within a group-writable directory (`va_techs`), maintaining high security standards.
+- **Persistence**: Configured the `create` directive to ensure new log files inherit the correct ownership and `0660` permissions for uninterrupted dashboard monitoring.
