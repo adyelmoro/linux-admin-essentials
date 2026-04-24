@@ -135,8 +135,22 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Dynamic Versioning**: Integrated shell-based timestamping (`date`) into the commit logic for granular recovery points.
 - **Audit Logging**: Configured standard output and error redirection (`2>&1`) to a dedicated `watchtower.log` for automated job monitoring.
 
-### High Availability Cluster (Load Balancing)
-- **Traffic Orchestration**: Deployed an Nginx Load Balancer as a reverse proxy to manage all incoming traffic on the standard HTTP port (80).
-- **Service Redundancy**: Scaled the PHP Dashboard to multiple replicas using Docker Compose `deploy` logic, effectively eliminating single points of failure.
-- **Failover & Reliability**: Configured an `upstream` server cluster to ensure 100% service uptime; if one dashboard container fails, Nginx automatically reroutes traffic to healthy nodes.
-- **Zero-Port Conflict Architecture**: Moved away from manual port mapping (`8081`, etc.) in favor of internal Docker DNS service discovery, streamlining the network footprint.
+### Load-Balanced High Availability Cluster
+
+### 🏗️ Architecture Overview
+Transitioned the project from a single-container instance to a **managed microservices cluster**. This setup uses an Nginx Reverse Proxy to distribute incoming traffic across multiple redundant application nodes.
+
+- **Gateway**: Nginx Reverse Proxy (Listening on Port 8080).
+- **Application Layer**: PHP-based Dashboard scaled to 2 replicas.
+- **Networking**: Internal Docker bridge network ensuring container isolation.
+
+### 🚀 Key Features
+- **High Availability (HA)**: The `deploy: replicas: 2` configuration ensures that the service remains reachable even if one container instance fails.
+- **Reverse Proxying**: Centralized traffic management via `nginx.conf`, abstracting the backend complexity from the user.
+- **Failover & Load Balancing**: Implemented an `upstream` cluster logic to share compute load and provide seamless failover.
+- **Network Security**: Containers are decoupled from the host network, exposing only the proxy gateway.
+
+### 🛠️ Maintenance Commands
+- **Scale the cluster**: `docker compose up -d --scale dashboard=3`
+- **View Proxy Logs**: `docker compose logs -f proxy`
+- **Total Reset**: `docker compose down && docker compose up -d`
