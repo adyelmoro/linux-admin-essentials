@@ -134,3 +134,9 @@ Established a robust backup protocol to ensure business continuity and protect s
 - **Task Scheduling**: Leveraged `crontab` to implement a "Set it and Forget it" backup lifecycle, ensuring zero data loss in the event of local hardware failure.
 - **Dynamic Versioning**: Integrated shell-based timestamping (`date`) into the commit logic for granular recovery points.
 - **Audit Logging**: Configured standard output and error redirection (`2>&1`) to a dedicated `watchtower.log` for automated job monitoring.
+
+### High Availability Cluster (Load Balancing)
+- **Traffic Orchestration**: Deployed an Nginx Load Balancer as a reverse proxy to manage all incoming traffic on the standard HTTP port (80).
+- **Service Redundancy**: Scaled the PHP Dashboard to multiple replicas using Docker Compose `deploy` logic, effectively eliminating single points of failure.
+- **Failover & Reliability**: Configured an `upstream` server cluster to ensure 100% service uptime; if one dashboard container fails, Nginx automatically reroutes traffic to healthy nodes.
+- **Zero-Port Conflict Architecture**: Moved away from manual port mapping (`8081`, etc.) in favor of internal Docker DNS service discovery, streamlining the network footprint.
