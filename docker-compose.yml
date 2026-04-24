@@ -1,16 +1,15 @@
-version: '3.8'
-
 services:
-  # Service 1: My Custom Dashboard
-  my-dashboard:
-    build: .
-    ports:
-      - "8081:80"
-    restart: always
-
-  # Service 2: Generic Nginx server for testing
-  web-test:
+  proxy:
     image: nginx:latest
     ports:
-      - "8080:80"
-    restart: unless-stopped
+      - "80:80"  # This is the only port the outside world sees
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - dashboard
+
+  dashboard:
+    build: .
+    deploy:
+      replicas: 2
+    # NO PORTS SECTION HERE!
