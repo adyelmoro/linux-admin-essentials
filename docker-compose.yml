@@ -1,15 +1,18 @@
 services:
+  # The Load Balancer (The Front Door)
   proxy:
     image: nginx:latest
     ports:
-      - "80:80"  # This is the only port the outside world sees
+      - "8080:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - dashboard
+    restart: always
 
+  # The Dashboard Cluster (The Workers)
   dashboard:
     build: .
+    restart: always
     deploy:
       replicas: 2
-    # NO PORTS SECTION HERE!
