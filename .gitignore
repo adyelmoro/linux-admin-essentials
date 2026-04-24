@@ -26,3 +26,6 @@ onboarding_history.log
 
 # Ignore the Docker build artifacts (if any)
 .dockerignore
+
+# Ignore log files for watch tower
+watchtower.log
